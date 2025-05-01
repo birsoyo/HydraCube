@@ -1,0 +1,6 @@
+
+set(GLFW_BUILD_DOCS OFF)
+set(GLFW_INSTALL OFF)
+set(GLFW_USE_HYBRID_HPG ON)
+#set(GLFW_LIBRARY_TYPE "OBJECT")
+add_subdirectory(glfw)

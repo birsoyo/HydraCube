@@ -1,0 +1,6 @@
+[submodule "Code/External/glfw/glfw"]
+	path = Code/External/glfw/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "Code/External/OpenUSD/OpenUSD"]
+	path = Code/External/OpenUSD/OpenUSD
+	url = https://github.com/PixarAnimationStudios/OpenUSD.git

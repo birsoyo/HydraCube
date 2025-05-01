@@ -1,0 +1,18 @@
+---
+Checks: '
+  -*,
+  bugprone-*,
+  clang-analyzer-*,
+  cppcoreguidelines-*,
+  modernize-*,
+  performance-*,
+  portability-*,
+  readability-*,
+  -readability-uppercase-literal-suffix,
+  -readability-redundant-access-specifiers,
+  misc-*,
+  -misc-non-private-member-variables-in-classes,
+  '
+WarningsAsErrors: ''
+HeaderFilterRegex: ''
+FormatStyle:     file

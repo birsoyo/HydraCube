@@ -1,0 +1,62 @@
+{
+    "version": 6,
+    "configurePresets": [
+      {
+        "name": "base",
+        "hidden": true,
+        "binaryDir": "${sourceDir}/out/builds/${presetName}",
+        "installDir": "${sourceDir}/out/installs/${presetName}",
+        "generator": "Ninja Multi-Config",
+        "cacheVariables": {
+          "CMAKE_CONFIGURATION_TYPES": "Debug;RelWithDebInfo",
+          "CMAKE_SKIP_INSTALL_ALL_DEPENDENCY": "ON",
+          "CMAKE_VERBOSE_MAKEFILE": "OFF",
+          "CMAKE_FIND_DEBUG_MODE": "OFF"
+        },
+        "debug": {
+          "tryCompile": false
+        }
+      },
+      {
+        "name": "base-win",
+        "inherits": "base",
+        "hidden": true,
+        "cacheVariables": {
+          "CMAKE_SYSTEM_VERSION": "10.0"
+        },
+        "condition": {
+          "type": "equals",
+          "lhs": "${hostSystemName}",
+          "rhs": "Windows"
+        },
+        "vendor": {
+          "jetbrains.com/clion": {
+            "toolchain": "Visual Studio"
+          }
+        }
+      },
+      {
+        "name": "vs-win-amd64",
+        "inherits": "base-win",
+        "generator": "Visual Studio 17 2022",
+        "cacheVariables": {
+        },
+        "architecture": {
+          "value": "x64",
+          "strategy": "external"
+        },
+        "toolset": {
+          "value": "host=x64",
+          "strategy": "external"
+        }
+      }
+    ],
+    "buildPresets": [
+      {
+        "name": "vs-win-amd64",
+        "configurePreset": "vs-win-amd64"
+      }
+    ]
+  
+  }
+  
