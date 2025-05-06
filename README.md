@@ -1,6 +1,6 @@
 # HydraCube
-Draw a cube with Hydra
-Trying to get materials work but they are not working.
+Draw a red cube with Hydra.
+
 
 # Building
 Only tested on windows.
@@ -13,5 +13,4 @@ Only tested on windows.
 
 
 # Cube
-The cube drawn without any materials.
-![Cube without material](Docs/Cube.png)
+![Cube with red material](Docs/Cube.png)
